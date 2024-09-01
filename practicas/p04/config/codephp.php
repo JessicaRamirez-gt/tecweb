@@ -10,7 +10,6 @@
             echo "<h3> El día de hoy es el ". date('d / M / Y H:i:s')."</h3> <hr/>";
             echo "<h2 >Bienvenido a mi sitio PHP 5 </h2>";
         ?>
-        //hola
     
     </body>
 </html>
