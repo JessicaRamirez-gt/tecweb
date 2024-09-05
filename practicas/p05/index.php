@@ -133,13 +133,61 @@
             echo "Valor de a con integer = $c<br>";
 
             
+            echo '<br>';
+            echo '---PARTE 6';
+            echo '<br>';
 
             $a ="0";
+            var_dump($a);
+
+            echo '<br>';
+
             $b ="TRUE";
+            var_dump($b);
+
+            echo '<br>';
+
             $c ="FALSE";
+            var_dump($c);
+            //echo " el valor de c es" .strval($c); MUESTRA EL CONTENIDO DE C
+            echo '<br>'; 
+            if($c==1){
+                echo 'c es verdadero';
+            } else{
+                echo 'c es falso';
+            }
+
+            echo '<br>';
+
             $d = ($a OR $b);
-            $e = ($a AND $b);
+            var_dump($d);
+
+            echo '<br>';
+
+            $e = ($a AND $c);
+            var_dump($e);
+
+            echo '<br>';
+
+            if($e==1){
+                echo 'e es verdadero';
+            } else{
+                echo 'e es falso';
+            }
+
+            echo '<br>';
+
             $f = ($a XOR $b);
+            var_dump($f);
+
+            echo '<br>';
+            echo "Versión de PHP: " . $_SERVER['PHP_SELF'];
+            echo '<br>';
+            echo "Información del servidor: " . $_SERVER['SERVER_SOFTWARE'];
+            echo '<br>';
+            echo "Sistema operativo del servidor: " . $_SERVER['SERVER_SOFTWARE'];
+            echo '<br>';
+            echo "Idioma del navegador: " . $_SERVER['HTTP_ACCEPT_LANGUAGE'];
 
 
 
