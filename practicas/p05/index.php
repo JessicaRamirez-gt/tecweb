@@ -48,7 +48,7 @@
 
             echo '<br>';
 
-            $Z[] = &$a;
+            $z[] = &$a;
             print_r($z);
 
             echo '<br>';
@@ -73,8 +73,50 @@
 
             echo '<br>';
 
-            $z[0] *= "MySQL";
-            echo $z[0];
+            $z[0] = "MySQL";
+            print_r($z[0]);
+
+            echo '<br> ---PARTE 4';
+            
+            global $a;
+            $a = "PHP5";
+            echo $a;
+
+            echo '<br>';
+
+            global $z;
+            $z[] = &$a;
+            print_r($z);
+
+            echo '<br>';
+
+            global $b;
+            $b = "5a version de PHP";
+            echo $b;
+
+            echo '<br>';
+
+            global $c;
+            $c = $b;
+            echo $c;
+
+            echo '<br>';
+
+            global $a;
+            $a .= $b;
+            echo $a;
+
+            echo '<br>';
+
+            global $b;
+            $b *= $c;
+            echo $b;
+
+            echo '<br>';
+
+            global $z;
+            $z[0] = "MySQL";
+            print_r($z[0]);
 
 
         ?>
