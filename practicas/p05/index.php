@@ -68,8 +68,8 @@
 
             echo '<br>';
 
-            $b *= $c;
-            echo $b;
+            //$b *= $c; NO SE VE, DA FALLO
+            //echo $b;
 
             echo '<br>';
 
@@ -108,15 +108,39 @@
 
             echo '<br>';
 
-            global $b;
-            $b *= $c;
-            echo $b;
+            //global $b;
+            //$b *= $c;  NO FUNCIONA
+            //echo $b;
 
             echo '<br>';
 
             global $z;
             $z[0] = "MySQL";
             print_r($z[0]);
+
+            echo '<br>';
+            echo '---PARTE 5';
+            echo '<br>';
+
+            $a ="7 personas";
+            echo "Valor de a = $a<br>";
+            $b =(integer) $a;
+            echo "Valor de a con integer = $b<br>";
+
+            $a ="9E3";
+            echo "Valor de a = $a<br>";
+            $c = (double) $a;
+            echo "Valor de a con integer = $c<br>";
+
+            
+
+            $a ="0";
+            $b ="TRUE";
+            $c ="FALSE";
+            $d = ($a OR $b);
+            $e = ($a AND $b);
+            $f = ($a XOR $b);
+
 
 
         ?>
