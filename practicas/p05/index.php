@@ -180,7 +180,7 @@
             $f = ($a XOR $b);
             var_dump($f);
 
-            echo '<br>';
+            echo '<br>---PARTE 7<br>';
             echo "Versión de PHP: " . $_SERVER['PHP_SELF'];
             echo '<br>';
             echo "Información del servidor: " . $_SERVER['SERVER_SOFTWARE'];
