@@ -10,13 +10,22 @@
     </style>
     <style>
       body{
-            background-color: #faf2e4;
+            background-color: #a4b7ef;
             margin: 0 15%;
             font-family: 'Times New Roman', Times, serif;
 
             /*background-image: url(https://assets.adidas.com/images/w_940,f_auto,q_auto/2cff71f1cf4b4613b360a95b3837848b_9366/HP3266_HM7.jpg);
             *background-repeat: repeat-y;*/
             
+        }
+        h1{
+            text-align: center;
+            font-family: Helvetica;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #e8edef;
+            border-bottom: 1px solid #43bff0;
+            margin-top: 30px;
         }
         
     </style>
@@ -53,10 +62,10 @@
 
     <p>Características <em>(escoge tantas como quieras)</em>:</p>
       <ul>
-      <li>Cordones brillantes</li>
-      <li>Logo metálico</li>
-      <li>Suela luminosa</li>
-      <li>WiFi integrado</li>
+        <li><input type="checkbox" name="features[]" value="laces">Cordones brillantes</li>
+        <li><input type="checkbox" name="features[]" value="logo">Logo metálico</li>
+        <li><input type="checkbox" name="features[]" value="suela">Suela luminosa</li>
+        <li><input type="checkbox" name="features[]" value="wifi">WiFi integrado</li>
       </ul>
 
     <p>Talla</p>
