@@ -26,6 +26,40 @@
                   }
             ?>
         </fieldset>
-        
+    </form>
+    <form>
+        <fieldset>
+            <legend>Secuencia impar-par-impar</legend>
+            <?php
+                // Cantidad máxima de iteraciones (ajustable según tus necesidades)
+                $max_iteraciones = 100;
+
+                // Inicializar variables
+                $matriz = [];
+                $iteraciones = 0;
+                $numeros;
+
+                // Generar números hasta encontrar la secuencia deseada o alcanzar el máximo de iteraciones
+                do {
+                    $numeros = numAleatorios(3);
+                    $iteraciones++;
+                } while (!verificar_secuencia($numeros) && $iteraciones <= $max_iteraciones);
+                // Agregar la secuencia encontrada a la matriz
+                if ($iteraciones <= $max_iteraciones) {
+                    $matriz[] = $numeros;
+                }
+
+                // Mostrar resultados
+                if (count($matriz) > 0) {
+                    echo "Números obtenidos en " . $iteraciones . " iteraciones:<br>";
+                    foreach ($matriz as $fila) {
+                        echo implode(", ", $fila) . "<br>";
+                    }
+                    echo "Total de números: " . count($matriz) * 3;
+                } else {
+                    echo "No se encontró la secuencia deseada en el número máximo de iteraciones.";
+                }
+            ?>
+        </fieldset>
     </form>
 </body>
