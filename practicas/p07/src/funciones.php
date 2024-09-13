@@ -17,4 +17,15 @@
     function verificar_secuencia($numeros) {
         return $numeros[0] % 2 !== 0 && $numeros[1] % 2 === 0 && $numeros[2] % 2 !== 0;
     }
+
+    //Ejercicio 3
+    function multiplo($nom) {
+        $numrand=0;
+        while (true) {
+            $numrand = rand(1,100);
+            if ($numrand % $nom == 0) {
+                return $numrand;
+            }
+        }
+    }
 ?>
