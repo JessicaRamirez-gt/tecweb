@@ -1,4 +1,5 @@
 <?php
+    //Jessica Ramírez
     include 'src/funciones.php';
 ?>
 
@@ -79,6 +80,24 @@
                 } else {
                     echo "No se encontró ningún múltiplo.";
                 }
+            ?>
+        </fieldset>
+    </form>
+    <form>
+    <h1>Cuarto ejercicio</h1>
+        <fieldset>
+            <legend><h2>Alfabeto ASCII y ciclo</h2></legend>
+            <?php
+                $alfabeto = crearArreglo();
+
+                echo '<table>';
+                foreach ($alfabeto as $codigo => $letra) {
+                    echo '<tr>';
+                    echo '<td>' . $codigo . '</td>';
+                    echo '<td>' . $letra . '</td>';
+                    echo '</tr>';
+                }
+                echo '</table>';
             ?>
         </fieldset>
     </form>

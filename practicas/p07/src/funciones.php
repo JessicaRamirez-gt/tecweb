@@ -1,4 +1,5 @@
 <?php
+    //JBRP
     //Ejercicio 1
     function esMultiploDe5o7($numero) {
         return ($numero % 5 == 0 && $numero % 7 == 0);
@@ -27,5 +28,14 @@
                 return $numrand;
             }
         }
+    }
+
+    //Ejercicio 4
+    function crearArreglo() {
+        $arreglo = [];
+        for ($i = 97; $i <= 122; $i++) {
+            $arreglo[$i] = chr($i);
+        }
+        return $arreglo;
     }
 ?>
