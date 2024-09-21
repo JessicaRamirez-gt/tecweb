@@ -71,7 +71,7 @@
             Numero: <input type="text" name="num">
             <input type="submit" value="Generar">
             <?php
-                $num = isset($_GET['num']); // Valor por defecto si no se proporciona
+                $num = isset($_GET['num']);
                 $num = intval($_GET['num']);
                 $randNum = multiplo($num);
                 
