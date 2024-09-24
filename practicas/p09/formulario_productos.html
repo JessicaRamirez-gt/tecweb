@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Producto</title>
+</head>
+<body>
+    <h1>Registro de Productos</h1>
+
+    <p>Inserta la información solicitada de tus productos&#169;</p>
+
+    <form id="formularioTenis" action="http://52.43.117.247/neo/classroom/tw/concurso.php" method="post">
+
+    <h2>Producto</h2>
+
+      <fieldset>
+        <legend>Información de Producto</legend>
+
+        <ul>
+          <li><label for="form-name">Nombre:</label> <input type="text" name="name" id="form-name"></li>
+          <li><label for="form-branch">Marca:</label> <input type="text" name="branch" id="form-branch"></li>
+          <li><label for="form-model">Modelo:</label> <input type="text" name="model" id="form-model"></li>
+          <li><label for="form-price">Precio:</label><br><input type="number" name="price" id="form-price" step="0.01" min="0"></li>
+          <li><label for="form-details">Detalles del producto:</label><br><textarea name="details" rows="4" cols="60" id="form-details" placeholder="No más de 300 caracteres de longitud"></textarea></li>
+          <li><label for="form-unidades">Unidades:</label><br><input type="number" name="units" id="form-unidades" min="0"></li>
+        </ul>
+      </fieldset>
+
+      
+      <p>
+        <input type="submit" value="Registrar producto">
+        <input type="reset">
+      </p>
+
+    </form>
+</body>
+</html>
