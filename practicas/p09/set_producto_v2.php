@@ -1,11 +1,11 @@
 <?php
-$nombre = 'nombre_producto';
-$marca  = 'marca_producto';
-$modelo = 'modelo_producto';
-$precio = 1.0;
-$detalles = 'detalles_producto';
-$unidades = 1;
-$imagen   = 'img/imagen.png';
+$nombre = $_POST['name'];
+$marca = $_POST['branch'];
+$modelo = $_POST['model'];
+$precio = $_POST['price'];
+$detalles = $_POST['details'];
+$unidades = $_POST['units'];
+$imagen = 'img/default.png'; // Puedes manejar la carga de imágenes de otra forma si es necesario
 
 /** SE CREA EL OBJETO DE CONEXION */
 @$link = new mysqli('localhost', 'root', '621252', 'marketzone');	
