@@ -30,6 +30,12 @@ if ($result->num_rows > 0) {
     echo 'El producto ya existe en la base de datos.';
 } else {
     // Si no existe, lo insertamos
+    /*$sql = "INSERT INTO productos (id, nombre, marca, modelo, precio, detalles, unidades, imagen, eliminado)
+            VALUES (null, '{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}', 0)";*/
+    // Esta nueva query especifica los nombres de las columnas y no incluye valores
+    // Si no existe, lo insertamos
+
+    //nueva inserción
     $sql = "INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen)
             VALUES ('{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}')";
  
