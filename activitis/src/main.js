@@ -40,3 +40,17 @@ function inUno(){
 
     show.innerHTML = '<br> Hola '+nombre+', así que tienes '+edad+' años <br>';
 }
+
+function progEs(){
+    var valor1;
+    var valor2;
+
+    valor1 = window.prompt("Introducir primer número:", "");
+    valor2 = window.prompt("Introducir segundo número", "");
+                
+    var suma = parseInt(valor1)+parseInt(valor2);
+    var producto = parseInt(valor1)*parseInt(valor2);
+
+    var show = document.getElementById('inUno');
+    show.innerHTML = '<br> La suma es '+ suma+ '<br> El producto es '+producto;
+}
