@@ -60,11 +60,11 @@ function condIf(){
     var nota;
                 
     nombre = window.prompt("Ingresa tu nombre:", "");
-    nota = prompt("Ingresa tu nota:", "");
+    nota = window.prompt("Ingresa tu nota:", "");
     
     var show = document.getElementById('if');
 
-    if (nota>=4) {
-    show.innerHtml(nombre+" esta aprobado con un "+nota);
+    if (parseInt(nota)>=4) {
+        show.innerHTML = nombre + ' está aprobado con un '+nota;
     }
 }
