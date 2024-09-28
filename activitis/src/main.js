@@ -147,7 +147,7 @@ function suich(){
 function suichBG(){
     var col;
     col = window.prompt("Ingresa el color con que quierar pintar el fondo de la ventana (rojo, verde, azul)" , "" );
-    var show = document.getElementById('suichColor')  
+    var show = document.getElementById('suichColor');
     
     switch (col) {
         case 
@@ -158,5 +158,18 @@ function suichBG(){
         case 'azul': show.style.backgroundColor = "#0000ff";
             break;
         default: show.innerHTML = 'No es válido el color ingresado';
+    }
+}
+
+function unoCien(){
+    var x;
+    x=1;
+
+    var show = document.getElementById('unoAC');
+    show.innerHTML='';
+
+    while (x<=100) {
+        show.innerHTML += "<br> Iteración"+x;
+        x=x+1;
     }
 }
