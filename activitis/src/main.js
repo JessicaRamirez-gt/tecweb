@@ -173,3 +173,43 @@ function unoCien(){
         x=x+1;
     }
 }
+
+function sumaCinco(){
+    var show = document.getElementById('sumC');
+
+    var x=1;
+    var suma=0;
+    var valor;
+    
+    while (x<=5){
+        valor = window.prompt("Ingresa el valor:", "");
+        valor = parseInt(valor);
+                        
+        suma = suma+valor;
+        x = x+1;
+    }
+
+    show.innerHTML = '<br> La suma es: '+suma;
+}
+
+function digitos(){
+    var show = document.getElementById('digit');
+
+    var valor;
+    do{
+        valor = window.prompt("Ingresa un valor entre 0 y 999:", "");
+        valor = parseInt(valor);
+        show.innerHTML='El valor '+valor+' tiene: ';
+        if (valor<10)
+            show.innerHTML= "Tiene 1 dígitos";
+        else
+            if (valor<100) {
+                show.innerHTML= "Tiene 2 dígitos";
+            }
+        else {
+            show.innerHTML= "Tiene 3 dígitos");
+        }
+        show.innerHTML= '<br>';
+    }while(valor!=0);
+
+}
