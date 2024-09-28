@@ -241,3 +241,16 @@ function doc(){
     
     
 } 
+
+function mostrarMensaje(show){
+    show.innerHTML += 'Cuidado<br> Ingresa tu documento correctamente<br>';
+    
+} 
+function message(){
+    var show = document.getElementById('func');
+
+    mostrarMensaje(show);
+    mostrarMensaje(show);
+    mostrarMensaje(show);
+
+} 
