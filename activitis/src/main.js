@@ -68,3 +68,23 @@ function condIf(){
         show.innerHTML = nombre + ' está aprobado con un '+nota;
     }
 }
+
+function ifElse(){
+    var num1,num2;
+                    
+    num1 = window.prompt("Ingresa el primer número:", "");
+    num2 = window.prompt("Ingresa el segundo número:", "");
+                    
+    num1 = parseInt(num1);
+    num2 = parseInt(num2);
+
+    var show = document.getElementById('ifElse');
+
+
+    if (num1>num2) {
+        show.innerHTML= "el mayor es " +num1;
+    }
+    else {
+        show.innerHTML= "el mayor es " +num2;
+    }
+}
