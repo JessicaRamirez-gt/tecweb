@@ -254,3 +254,74 @@ function message(){
     mostrarMensaje(show);
 
 } 
+
+function mostrarRango(show,x1,x2){ 
+    var inicio;
+        for(inicio=x1; inicio<=x2; inicio++) {
+            show.innerHTML += 'Inicio <br>'+ "";
+        }
+} 
+function valores(){
+    var show = document.getElementById('rang');
+    var valor1,valor2;
+
+    valor1 = window.prompt("Ingresa el valor inferior:", "");
+    valor1 = parseInt(valor1);
+
+    valor2 = window.prompt("Ingresa el valor superior:", "");
+    valor2 = parseInt(valor2);
+
+    mostrarRango(show,valor1,valor2);
+
+} 
+
+
+function convertirCastellano(x){
+    if(x==1)
+        return 'uno';
+        else
+            if(x==2)
+                return 'dos';
+            else
+                if(x==3)
+                    return 'tres';
+                else
+                    if(x==4)
+                        return 'cuatro';
+                    else
+                        if(x==5)
+                            return 'cinco';
+                        else
+                            return 'valor incorrecto';
+} 
+function convert(){
+    var show = document.getElementById('caste');
+
+    var valor = window.prompt("Ingresa un valor entre 1 y 5", "");
+    valor = parseInt(valor);
+
+    var r = convertirCastellano(valor);
+    show.innerHTML=r;    
+    
+} 
+
+function convertirCastellano_(x){
+    switch (x) {
+        case 1: return "uno";
+        case 2: return "dos";
+        case 3: return "tres";
+        case 4: return "cuatro";
+        case 5: return "cinco";
+        default: return "valor incorrecto";
+    }
+} 
+function convertir(){
+    var show = document.getElementById('castell');
+
+    var valor = window.prompt("Ingresa un valor entre 1 y 5", "");
+    valor = parseInt(valor);
+
+    var r = convertirCastellano_(valor);
+    show.innerHTML=r;    
+    
+} 
