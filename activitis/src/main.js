@@ -29,3 +29,14 @@ function varUno(){
 
     show.innerHTML = '<br>'+nombre+'<br>'+edad+'<br>'+altura+'<br>'+casado;
 }
+
+function inUno(){
+    var nombre;
+    var edad;
+    nombre = window.prompt("Ingresa tu nombre:", "");
+    edad = window.prompt("Ingresa tu edad:", "");
+    
+    var show = document.getElementById('inUno');
+
+    show.innerHTML = '<br> Hola '+nombre+', así que tienes '+edad+' años <br>';
+}
