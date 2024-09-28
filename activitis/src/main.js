@@ -150,7 +150,8 @@ function suichBG(){
     var show = document.getElementById('suichColor')  
     
     switch (col) {
-        case 'rojo': show.style.backgroundColor = "#ff0000";
+        case 
+            'rojo': show.style.backgroundColor = "#ff0000";
             break;
         case 'verde': show.style.backgroundColor = "#00ff00";
             break;
