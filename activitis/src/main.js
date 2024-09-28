@@ -140,6 +140,22 @@ function suich(){
             break;
         case 5: show.innerHTML= 'cinco';
             break;
-        default:show.innerHTML= 'debe ingresar un valor comprendido entre 1 y 5;
+        default:show.innerHTML= 'debe ingresar un valor comprendido entre 1 y 5';
+    }
+}
+
+function suichBG(){
+    var col;
+    col = window.prompt("Ingresa el color con que quierar pintar el fondo de la ventana (rojo, verde, azul)" , "" );
+    var show = document.getElementById('suichColor')  
+    
+    switch (col) {
+        case 'rojo': show.style.backgroundColor = "#ff0000";
+            break;
+        case 'verde': show.style.backgroundColor = "#00ff00";
+            break;
+        case 'azul': show.style.backgroundColor = "#0000ff";
+            break;
+        default: show.innerHTML = 'No es válido el color ingresado';
     }
 }
