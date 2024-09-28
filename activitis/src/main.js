@@ -104,7 +104,7 @@ function ifAnidados(){
     var pro;
     pro = (nota1+nota2+nota3)/3;
 
-    var show = document.getElementById('ifElse');
+    var show = document.getElementById('ifElseAn');
 
 
     if (pro>=7) {
@@ -117,5 +117,29 @@ function ifAnidados(){
         else {
             show.innerHTML = "reprobado";
         }
+    }
+}
+
+function suich(){
+    var valor;
+                    
+    valor = window.prompt("Ingresar un valor comprendido entre 1 y 5:", "");
+                    
+    //Convertimos a entero
+    valor = parseInt(valor);
+    var show = document.getElementById('suich');
+     
+    switch (valor) {
+        case 1: show.innerHTML= 'uno';
+            break;
+        case 2: show.innerHTML= 'dos';
+            break;
+        case 3: show.innerHTML= 'tres';
+            break;
+        case 4: show.innerHTML= 'cuatro';
+            break;
+        case 5: show.innerHTML= 'cinco';
+            break;
+        default:show.innerHTML= 'debe ingresar un valor comprendido entre 1 y 5;
     }
 }
