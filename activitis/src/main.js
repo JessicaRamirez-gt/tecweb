@@ -196,20 +196,30 @@ function digitos(){
     var show = document.getElementById('digit');
 
     var valor;
+
     do{
         valor = window.prompt("Ingresa un valor entre 0 y 999:", "");
-        valor = parseInt(valor);
+
+        //Código para que termine el ciclo al momento de insertar un vacio
+        //if(valor == ""){
+          //  break;
+        //}
+
         show.innerHTML='El valor '+valor+' tiene: ';
+        valor = parseInt(valor);
         if (valor<10)
             show.innerHTML= "Tiene 1 dígitos";
+            
         else
             if (valor<100) {
                 show.innerHTML= "Tiene 2 dígitos";
+                
             }
         else {
-            show.innerHTML= "Tiene 3 dígitos");
+            show.innerHTML= "Tiene 3 dígitos";
+            
         }
-        show.innerHTML= '<br>';
+        show.innerHTML += '<br>';
     }while(valor!=0);
 
 }
