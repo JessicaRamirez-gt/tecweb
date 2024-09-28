@@ -51,6 +51,20 @@ function progEs(){
     var suma = parseInt(valor1)+parseInt(valor2);
     var producto = parseInt(valor1)*parseInt(valor2);
 
-    var show = document.getElementById('inUno');
+    var show = document.getElementById('Estruct');
     show.innerHTML = '<br> La suma es '+ suma+ '<br> El producto es '+producto;
+}
+
+function condIf(){
+    var nombre;
+    var nota;
+                
+    nombre = window.prompt("Ingresa tu nombre:", "");
+    nota = prompt("Ingresa tu nota:", "");
+    
+    var show = document.getElementById('if');
+
+    if (nota>=4) {
+    show.innerHtml(nombre+" esta aprobado con un "+nota);
+    }
 }
