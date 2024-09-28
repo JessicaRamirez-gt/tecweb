@@ -88,3 +88,34 @@ function ifElse(){
         show.innerHTML= "el mayor es " +num2;
     }
 }
+
+function ifAnidados(){
+    var nota1,nota2,nota3;
+
+    nota1 = window.prompt("Ingresa 1ra. nota:", "");
+    nota2 = window.prompt("Ingresa 2da. nota:", "");
+    nota3 = window.prompt("Ingresa 3ra. nota:", "");
+
+    //Convertimos los 3 string en enteros
+    nota1 = parseInt(nota1);
+    nota2 = parseInt(nota2);
+    nota3 = parseInt(nota3);
+
+    var pro;
+    pro = (nota1+nota2+nota3)/3;
+
+    var show = document.getElementById('ifElse');
+
+
+    if (pro>=7) {
+        show.innerHTML = "aprobado";
+    }
+    else {
+        if (pro>=4) {
+            show.innerHTML = "regular";
+        }
+        else {
+            show.innerHTML = "reprobado";
+        }
+    }
+}
