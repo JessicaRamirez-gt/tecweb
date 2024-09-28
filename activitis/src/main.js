@@ -15,7 +15,7 @@ function getDatos(){
 function holaMundo(){
     var mostrar = document.getElementById('Hola');
     //mostrar = document.write('Hola Mundo');
-    mostrar.innerHTML = '<h3> Hola mundo'
+    mostrar.innerHTML = '<h3> Hola mundo';
 }
 
 //Función de variables
@@ -233,3 +233,11 @@ function unoDiez(){
         show.innerHTML+= f+'-';
     }
 }
+
+function doc(){
+    var show = document.getElementById('imp');
+
+    show.innerHTML = 'Cuidado<br> Ingresa tu documento correctamente<br> Cuidado<br> Ingresa tu documento correctamente<br> Cuidado<br> Ingresa tu documento correctamente<br>'
+    
+    
+} 
