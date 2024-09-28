@@ -223,3 +223,13 @@ function digitos(){
     }while(valor!=0);
 
 }
+
+function unoDiez(){
+    var show = document.getElementById('for');
+
+    var f;
+    for(f=1; f<=10; f++)
+    {
+        show.innerHTML+= f+'-';
+    }
+}
