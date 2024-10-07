@@ -7,14 +7,24 @@
         function verificar()
         {
             var nom=document.getElementById('nombre').value;
+            var mod=document.getElementById('model').value;
 
             if(nom.length>100)
             {
-                 alert('El nombre no puede tener mas de 100 caracteres!!!');
+                 alert('El nombre no puede tener mas de 100 caracteres');
             }
             else
             {
                  alert('Largo de nombre correcta');
+            }
+
+            if(mod.length>25)
+            {
+                 alert('El modelo no puede tener mas de 25 caracteres');
+            }
+            else
+            {
+                 alert('Largo de modelo correcta');
             }
         }
     </script>
@@ -33,8 +43,8 @@
 
         <ul>
           <li><label for="form-name">Nombre del Producto:</label> <input type="text" name="name" id="nombre" maxlength="100"></li>
-          <li><label for="form-model">Modelo:</label> <input type="text" name="model" id="form-model"></li>
-          <li><label for="form-price">Precio:</label><br><input type="number" name="price" id="form-price" step="0.01" min="0"></li>
+          <li><label for="form-model">Modelo:</label> <input type="text" name="model" id="model" maxlength="25"></li>
+          <li><label for="form-price">Precio:</label><br><input type="number" name="price" id="price" step="0.01" min="99.99" placeholder="99.99"></li>
           <li><label for="form-details">Detalles del producto:</label><br><textarea name="details" rows="4" cols="60" id="form-details" placeholder="No más de 300 caracteres de longitud"></textarea></li>
           <li><label for="form-unidades">Unidades:</label><br><input type="number" name="units" id="form-unidades" min="0"></li>
         </ul>
