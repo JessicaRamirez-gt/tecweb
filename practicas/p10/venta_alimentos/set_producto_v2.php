@@ -2,11 +2,11 @@
 // Recibe los datos del formulario
 $nombre = $_POST['name'];
 $marca = $_POST['marca'];
-$modelo = $_POST['modelo'];
-$precio = $_POST['precio'];
-$detalles = $_POST['detalles'];
-$unidades = $_POST['unidades'];
-$imagen = $_POST['imagen']; // Puedes manejar la carga de imágenes de otra forma si es necesario
+$modelo = $_POST['model'];
+$precio = $_POST['price'];
+$detalles = $_POST['details'];
+$unidades = $_POST['units'];
+$imagen = $_POST['image']; // Puedes manejar la carga de imágenes de otra forma si es necesario
 
 /** SE CREA EL OBJETO DE CONEXION */
 @$link = new mysqli('localhost', 'root', '621252', 'marketzone');	

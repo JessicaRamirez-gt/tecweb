@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Registro de Productos</title>
+  <style type="text/css">
+    ol,
+    ul {
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Registro de Productos &ldquo;Buen Producto&rdquo;</h1>
+
+  <p>A continuación, introduce un nuevo producto.</p>
+
+  <form id="formularioProducto" action="http://localhost/tecweb/practicas/p10/set_producto_v2.php" method="post">
+
+    <h2>Información de Producto</h2>
+
+    <fieldset>
+      <legend>Información</legend>
+
+      <ul>
+        <!-- Nombre: Requerido, máximo 100 caracteres -->
+        <li>
+          <label for="form-name">Nombre:</label>
+          <input type="text" name="name" id="form-name" maxlength="100" required>
+        </li>
+
+        <!-- Marca: Requerido, lista de opciones únicas -->
+        <li>
+          <label for="form-marca">Marca:</label>
+          <select name="marca" id="form-marca" required>
+            <option value="">Seleccione una marca</option>
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+            <option value="Puma">Puma</option>
+            <option value="Pirma">Pirma</option>
+          </select>
+        </li>
+
+        <!-- Modelo: Requerido, alfanumérico, máximo 25 caracteres -->
+        <li>
+          <label for="form-modelo">Modelo:</label>
+          <input type="text" name="modelo" id="form-modelo" pattern="[A-Za-z0-9]+" maxlength="25" required>
+        </li>
+
+        <!-- Precio: Requerido, mayor a 99.99 -->
+        <li>
+          <label for="form-precio">Precio:</label>
+          <input type="number" name="precio" id="form-precio" step="0.01" min="100" required>
+        </li>
+
+        <!-- Unidades: Requerido, mayor o igual a 0 -->
+        <li>
+          <label for="form-unidades">Unidades:</label>
+          <input type="number" name="unidades" id="form-unidades" min="0" required>
+        </li>
+
+        <!-- Detalles: Opcional, máximo 250 caracteres -->
+        <li>
+          <label for="form-detalles">Detalles:</label><br>
+          <textarea name="detalles" rows="4" cols="60" id="form-detalles" maxlength="250" placeholder="No más de 250 caracteres"></textarea>
+        </li>
+
+        <!-- Ruta de imagen: Opcional, valor por defecto "img/imagen.png" -->
+        <li>
+          <label for="form-imagen">Ruta de la imagen:</label>
+          <input type="text" name="imagen" id="form-imagen" placeholder="img/imagen.png" value="img/imagen.png">
+        </li>
+      </ul>
+    </fieldset>
+
+    <p>
+      <input type="submit" value="Agregar">
+      <input type="reset" value="Restablecer">
+    </p>
+
+  </form>
+</body>
+
+</html>

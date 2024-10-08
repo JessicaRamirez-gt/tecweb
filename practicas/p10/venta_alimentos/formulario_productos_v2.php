@@ -23,44 +23,40 @@
     $link->close(); // Cerrar conexión
   }
 ?>
-  <h1>Registro de Productos &ldquo;Buen Producto&rdquo;</h1>
+  <h1>Registro de Productos </h1>
   <p>Modifica el producto.</p>
-  <form id="formularioProducto" action="update_producto.php" method="post"> <!-- Acción modificada -->
+  <form id="formularioProducto" action="http://localhost/tecweb/practicas/p10/venta_alimentos/update_producto.php" method="post"> <!-- Acción modificada -->
     <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>"> <!-- ID del producto -->
     <h2>Información de Producto  (ALIMENTOS PARA MASCOTAS)</h2>
     <fieldset>
-      <legend>Información</legend>
-      <ul>
-        <li><label for="form-name">Nombre:</label>
-          <input type="text" name="nombre" id="form-name" maxlength="100" value="<?= htmlspecialchars($producto['nombre']) ?>" required>
-        </li>
-        <li><label for="form-marca">Marca:</label>
-          <select name="marca" id="form-marca" required>
-            <option value="">Seleccione una marca</option>
-            <option value="Nike" <?= $producto['marca']=='Purina'?'selected':'' ?>>Nike</option>
-            <option value="Adidas" <?= $producto['marca']=='Pedigree'?'selected':'' ?>>Adidas</option>
-            <option value="Puma" <?= $producto['marca']=='Hills'?'selected':'' ?>>Puma</option>
-            <option value="Pirma" <?= $producto['marca']=='Nucan'?'selected':'' ?>>Pirma</option>
-          </select>
-        </li>
-        <li><label for="form-modelo">Modelo:</label>
-          <input type="text" name="modelo" id="form-modelo" pattern="[A-Za-z0-9]+" maxlength="25" value="<?= htmlspecialchars($producto['modelo']) ?>" required>
-        </li>
-        <li><label for="form-precio">Precio:</label>
-          <input type="number" name="precio" id="form-precio" step="0.01" min="100" value="<?= htmlspecialchars($producto['precio']) ?>" required>
-        </li>
-        <li><label for="form-unidades">Unidades:</label>
-          <input type="number" name="unidades" id="form-unidades" min="0" value="<?= htmlspecialchars($producto['unidades']) ?>" required>
-        </li>
-        <li><label for="form-detalles">Detalles:</label><br>
-          <textarea name="detalles" rows="4" cols="60" id="form-detalles" maxlength="250"><?= htmlspecialchars($producto['detalles']) ?></textarea>
-        </li>
-        <li><label for="form-imagen">Ruta de la imagen:</label>
-          <input type="text" name="imagen" id="form-imagen" placeholder="image.png" value="<?= htmlspecialchars($producto['imagen']) ?>">
-        </li>
-      </ul>
+        <legend>Información</legend>
+        <label for="form-name">Nombre del Producto:</label> <input type="text" name="name" id="nombre" maxlength="100" value="<?= htmlspecialchars($producto['nombre']) ?>" >
+
+        <ul>
+          
+          <li><label for="form-model">Modelo:</label> <input type="text" name="model" id="model" maxlength="25" value="<?= htmlspecialchars($producto['modelo']) ?>"required></li>
+          <li><label for="form-price">Precio:</label><br><input type="number" name="price" id="price" step="0.01" min="99.99" placeholder="99.99" value="<?= htmlspecialchars($producto['precio']) ?>" required></li>
+          <li><label for="form-details">Detalles del producto:</label><br><textarea name="details" rows="4" cols="60" id="form-details" placeholder="No más de 300 caracteres de longitud" value="<?= htmlspecialchars($producto['detalles']) ?>"></textarea></li>
+          <li><label for="form-unidades">Unidades:</label><br><input type="number" name="units" id="unidades" min="0" value="<?= htmlspecialchars($producto['unidades']) ?>" required></li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend><p>Marca <em>(escoge una)</em>:</p></legend>
+        <ul>
+          <li><input type="radio" name="marca" value="purina" required>Purina</li>
+          <li><input type="radio" name="marca" value="pedigree" required>Pedigree</li>
+          <li><input type="radio" name="marca" value="hills" required>Hills</li>
+          <li><input type="radio" name="marca" value="nucan" required>Nucan</li>
+        </ul>
+      </fieldset>
     </fieldset>
-    <p><input type="submit" value="Guardar cambios"><input type="reset" value="Restablecer"></p>
+    <fieldset>
+      <legend><p>Ruta</p></legend>
+      <label for="form-image">Ruta de imagen: </label><input type="text" name="image" id="image" placeholder="./Docs..."  value="<?= htmlspecialchars($producto['imagen']) ?>">
+    </fieldset>
+
+    <p><input type="submit" value="Guardar ">
+    <input type="reset" value="Restablecer"></p>
   </form>
 </body>
 </html>
