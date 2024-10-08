@@ -6,26 +6,34 @@
     <script type="text/javascript">
         function verificar()
         {
-            var nom=document.getElementById('nombre').value;
-            var mod=document.getElementById('model').value;
+            var nom=document.getElementById('nombre').value.trim();
+            var mod=document.getElementById('model').value.trim();
+            var marca = document.getElementById()
 
-            if(nom.length>100)
-            {
-                 alert('El nombre no puede tener mas de 100 caracteres');
-            }
-            else
-            {
-                 alert('Largo de nombre correcta');
+            if(!nom || !mod){
+                alert('Por favor llena todos los campos requeridos')
+
+            }else{
+                if(nom.length>100)
+                {
+                    alert('El nombre no puede tener mas de 100 caracteres');
+                }
+                else
+                {
+                    alert('Largo de nombre correcta');
+                }
+
+                if(mod.length>25)
+                {
+                    alert('El modelo no puede tener mas de 25 caracteres');
+                }
+                else
+                {
+                    alert('Largo de modelo correcta');
+                }
             }
 
-            if(mod.length>25)
-            {
-                 alert('El modelo no puede tener mas de 25 caracteres');
-            }
-            else
-            {
-                 alert('Largo de modelo correcta');
-            }
+            
         }
     </script>
 </head>
@@ -42,26 +50,31 @@
         <legend>Información</legend>
 
         <ul>
-          <li><label for="form-name">Nombre del Producto:</label> <input type="text" name="name" id="nombre" maxlength="100"></li>
-          <li><label for="form-model">Modelo:</label> <input type="text" name="model" id="model" maxlength="25"></li>
-          <li><label for="form-price">Precio:</label><br><input type="number" name="price" id="price" step="0.01" min="99.99" placeholder="99.99"></li>
+          <li><label for="form-name">Nombre del Producto:</label> <input type="text" name="name" id="nombre" maxlength="100" required></li>
+          <li><label for="form-model">Modelo:</label> <input type="text" name="model" id="model" maxlength="25" required></li>
+          <li><label for="form-price">Precio:</label><br><input type="number" name="price" id="price" step="0.01" min="99.99" placeholder="99.99" required></li>
           <li><label for="form-details">Detalles del producto:</label><br><textarea name="details" rows="4" cols="60" id="form-details" placeholder="No más de 300 caracteres de longitud"></textarea></li>
-          <li><label for="form-unidades">Unidades:</label><br><input type="number" name="units" id="form-unidades" min="0"></li>
+          <li><label for="form-unidades">Unidades:</label><br><input type="number" name="units" id="unidades" min="0" required></li>
         </ul>
       </fieldset>
       <fieldset>
         <legend><p>Marca <em>(escoge una)</em>:</p></legend>
         <ul>
-          <li><input type="radio" name="marca" value="purina">Purina</li>
-          <li><input type="radio" name="marca" value="pedigree">Pedigree</li>
-          <li><input type="radio" name="marca" value="hills">Hills</li>
-          <li><input type="radio" name="marca" value="nucan">Nucan</li>
+          <li><input type="radio" name="marca" value="purina" required>Purina</li>
+          <li><input type="radio" name="marca" value="pedigree" required>Pedigree</li>
+          <li><input type="radio" name="marca" value="hills" required>Hills</li>
+          <li><input type="radio" name="marca" value="nucan" required>Nucan</li>
         </ul>
       </fieldset>
+    </fieldset>
+    <fieldset>
+      <legend><p>Ruta</p></legend>
+      <label for="form-image">Ruta de imagen: </label><input type="text" name="image" id="imagen" value="./image.png" placeholder="./Docs..."><img src="image.png" width="50" height="50">
+    </fieldset>
 
       
       <p>
-        <input type="submit" value="Registrar producto" onclick="verificar()">
+        <input type="submit" value="Registrar producto" onclick="verificarRegistro()">
         <input type="reset">
       </p>
 
