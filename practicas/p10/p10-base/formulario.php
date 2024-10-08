@@ -14,7 +14,7 @@
 <body>
     <h1>Datos Personales</h1>
 
-    <form id="miFormulario" onsubmit="" method="post">
+    <form id="miFormulario" onsubmit="" method="post" method="get">
         <fieldset>
             <legend>Actualiza los datos personales de esta persoa:</legend>
             <ul>

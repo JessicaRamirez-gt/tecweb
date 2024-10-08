@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <title>Formulario Producto</title>
     <script type="text/javascript">
-        function verificar()
+        function verificarRegistro()
         {
-            var nom=document.getElementById('nombre').value.trim();
+            var nom=document.getElementById('nombre').value();
             var mod=document.getElementById('model').value.trim();
-            var marca = document.getElementById()
+            
 
-            if(!nom || !mod){
+            if(!nom ){
                 alert('Por favor llena todos los campos requeridos')
 
             }else{
-                if(nom.length>100)
+                if(nom.length>10)
                 {
                     alert('El nombre no puede tener mas de 100 caracteres');
                 }
@@ -48,9 +48,10 @@
 
       <fieldset>
         <legend>Información</legend>
+        <label for="form-name">Nombre del Producto:</label> <input type="text" name="name" id="nombre" maxlength="100" >
 
         <ul>
-          <li><label for="form-name">Nombre del Producto:</label> <input type="text" name="name" id="nombre" maxlength="100" required></li>
+          
           <li><label for="form-model">Modelo:</label> <input type="text" name="model" id="model" maxlength="25" required></li>
           <li><label for="form-price">Precio:</label><br><input type="number" name="price" id="price" step="0.01" min="99.99" placeholder="99.99" required></li>
           <li><label for="form-details">Detalles del producto:</label><br><textarea name="details" rows="4" cols="60" id="form-details" placeholder="No más de 300 caracteres de longitud"></textarea></li>
@@ -74,7 +75,7 @@
 
       
       <p>
-        <input type="submit" value="Registrar producto" onclick="verificarRegistro()">
+        <input type="submit" value="Registrar producto" onclick="verificarRegistro()" >
         <input type="reset">
       </p>
 
