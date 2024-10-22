@@ -1,7 +1,7 @@
 var baseJSON = {
     "precio": 0.0,
     "unidades": 1,
-    "modelo": "XX-000",
+    "modelo": "MM-000",
     "marca": "NA",
     "detalles": "NA",
     "imagen": "img/default.png"
@@ -102,21 +102,21 @@ $('#search').on('input', function () {
 // Agregar un nuevo producto
 $('#addProductForm').on('submit', function (e) {
     e.preventDefault();
-
-    let productoJsonString = $('#description').val();
     let nombreProducto = $('#name').val();
+    let descripcionJSON = $('#description').val();
 
     try {
-        var finalJSON = JSON.parse(productoJsonString);
+        // Intenta parsear el JSON y validar las propiedades
+        let producto = JSON.parse(descripcionJSON);
+        if (!producto.nombre || !producto.precio || !producto.cantidad) {
+            alert('La descripción debe contener las propiedades "nombre", "precio" y "cantidad".');
+            return;
+        }
     } catch (error) {
-        alert("La descripción no tiene un formato JSON válido.");
+        alert('La descripción no tiene un formato JSON válido.');
         return;
     }
-
-    if (!nombreProducto || nombreProducto.trim() === "") {
-        alert("El nombre del producto no puede estar vacío.");
-        return;
-    }
+    
     finalJSON['nombre'] = nombreProducto;
 
     $.ajax({
@@ -138,7 +138,7 @@ $('#addProductForm').on('submit', function (e) {
 
 // Eliminar un producto
 $(document).on('click', '.product-delete', function () {
-    if (confirm("De verdad deseas eliminar el Producto")) {
+    if (confirm("¿De verdad deseas eliminar el Producto?")) {
         let id = $(this).data('id');
         $.ajax({
             url: `./backend/product-delete.php?id=${id}`,
