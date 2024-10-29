@@ -4,7 +4,7 @@
     // SE OBTIENE LA INFORMACIÓN DEL PRODUCTO ENVIADA POR EL CLIENTE
     $data = array(
         'status'  => 'error',
-        'message' => 'Ya existe un producto con ese nombre'
+        'message' => 'Ya hay un producto con ese nombre'
     );
     if(isset($_POST['nombre'])) {
         // SE TRANSFORMA EL POST A UN STRING EN JSON, Y LUEGO A OBJETO

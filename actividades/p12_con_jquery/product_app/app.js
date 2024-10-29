@@ -125,21 +125,21 @@ $(document).ready(function() {
     });
   
     // Editar producto
-    $(document).on('click', '.product-item', function(e) {
-      const element = $(this)[0].activeElement.parentElement.parentElement;
-      const id = $(element).attr('productId');
-      $.post('./backend/product-single.php', { id }, response => {
-        let product = JSON.parse(response);
-        $('#name').val(product.nombre);
-        $('#productId').val(product.id);
-        $('#price').val(product.precio);
-        $('#units').val(product.unidades);
-        $('#model').val(product.modelo);
-        $('#brand').val(product.marca);
-        $('#details').val(product.detalles);
-        edit = true;
+    $(document).on("click", ".product-item", function () {
+        let element = $(this)[0].parentElement.parentElement;
+        let id = $(element).attr("productId");
+        $.post("backend/product-single.php", { id }, function (response) {
+          const product = JSON.parse(response);
+          $("#name").val(product.nombre);
+          $('#productId').val(product.id);
+          $('#price').val(product.precio);
+          $('#units').val(product.unidades);
+          $('#model').val(product.modelo);
+          $('#brand').val(product.marca);
+          $('#details').val(product.detalles);
+          edit = true;
+
       });
-      e.preventDefault();
     });
   
     // Búsqueda en tiempo real
