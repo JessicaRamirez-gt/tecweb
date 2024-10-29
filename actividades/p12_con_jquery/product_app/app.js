@@ -91,6 +91,7 @@ $(document).ready(function() {
       }
   
       // Preparar datos para enviar
+      
       const postData = {
         nombre: name,
         precio: parseFloat(price),
