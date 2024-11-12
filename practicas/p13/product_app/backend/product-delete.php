@@ -26,7 +26,7 @@
     require_once '../vendor/autoload.php';
     use myapi\Delete as Delete;
 
-    $products = new Delete("root", "Calcetines2", "marketzonefinal");
+    $products = new Delete("root", "621252", "marketzone");
 
     if(isset($_POST['id'])) {
         $products->delete($_POST['id']);

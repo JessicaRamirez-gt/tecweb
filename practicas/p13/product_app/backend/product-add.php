@@ -42,7 +42,7 @@
     use myapi\Create as Create;
     
 
-    $products = new Create("root", "Calcetines2", "marketzonefinal");
+    $products = new Create("root", "621252", "marketzone");
 
     if(isset($_POST['nombre'])) {
         $products->add($_POST);

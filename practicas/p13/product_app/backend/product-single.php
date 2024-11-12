@@ -30,7 +30,7 @@
     require_once '../vendor/autoload.php';
     use myapi\Read as Read;
 
-    $products = new Read("root", "Calcetines2", "marketzonefinal");
+    $products = new Read("root", "621252", "marketzone");
 
     if(isset($_POST['id'])) {
         $products->single($_POST['id']);

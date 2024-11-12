@@ -30,7 +30,7 @@
     require_once '../vendor/autoload.php';
     use myapi\Update as Update;
 
-    $products = new Update("root", "Calcetines2", "marketzonefinal");
+    $products = new Update("root", "621252", "marketzone");
 
     if(isset($_POST['id'])) {
         $products->edit($_POST);

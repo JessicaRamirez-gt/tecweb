@@ -382,20 +382,13 @@ function nombre(nom,edit){
 }
 
 function marca(mar){
-    let marcas = {
-        "Nike":1,
-        "Adidas":2,
-        "Puma":3,
-        "Pirma":4,
-        "Under Armour":5,
-        "Kappa":6
-    };
-    if(marcas[mar] == undefined){
-        console.log("Error en marca");
-        return true;
-    }else{
-        return false;
+    if(marca!= ""){
+        if(marca.length > 255){
+            console.log("Error en detalles");
+            return true;
+        }
     }
+    return false;
 }
 
 function modelo(model){
